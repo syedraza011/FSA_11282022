@@ -1,0 +1,36 @@
+* {
+    display: border-box;
+    margin:  0;
+    padding: 0;
+    border:  0;
+}
+nav {
+    background-color: orange;
+    height: 80px;
+    width: 100%;
+}
+.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+}
+nav ul {
+    float: right;
+    margin-right: 20;
+}
+nav ul li {
+    
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 5px;
+}
+nav ul li a {
+    padding: 7px 13px;
+    border-radius: 3px;
+    color: white;
+    font-size: 20px;
+    text-decoration: uppercase;
+
+}
+

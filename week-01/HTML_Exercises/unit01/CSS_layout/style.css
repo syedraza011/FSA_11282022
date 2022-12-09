@@ -1,0 +1,83 @@
+/* body {
+    background-color: lightgreen;
+}  */
+* {
+    text-decoration: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+}
+.topbar{
+    display: flex; /*must go wit flex direction*/
+    flex-direction: row;
+    text-align:center;
+    align-items:  center;
+    margin-top: 0px;
+    padding-bottom: 15px;
+    background-color: brown;
+
+}
+.first{
+    padding: 10px;
+}
+.second{
+    text-align: center;
+    padding: 0;
+    background-color: blue; /*so it won't bleed over items */
+    /* height: 90px; */
+    height: 40px;
+    width: 85%;
+    margin: 0px;
+    flex-wrap: wrap;
+    justify-content: flex-end; /*Horizental line flex*/
+padding: 10px;
+}
+.topbar{
+    background-color: brown;
+    display: flex;
+    height: 30px;
+    position: relative; /*to strictly follow it's parent*/
+}
+.secondbar{
+    border: 2px solid red;
+    width: 30%;
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
+    background-color: white; /*so it won't bleed over items */
+    /* height: 90px; */
+    min-height: 55vh;
+    margin: 3px;
+    flex-wrap: wrap;
+    justify-content: space-around; /*Horizental line flex*/
+}
+/* ul{
+    list-style: none; 
+} */
+
+.navbar{
+    display: flex;
+    
+    flex-direction: row;
+    font-size: 150%;
+    
+}
+img{
+    width:350px;
+}
+.verticalnav{
+color: brown;
+}
+
+.rightNav{ 
+display: flex;
+flex-direction: column;
+text-align: right;
+}
+.product{
+    
+    display: flex;
+    position: relative; /*to strictly follow it's parent*/
+}

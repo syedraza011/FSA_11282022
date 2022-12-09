@@ -1,0 +1,189 @@
+* {
+    display: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body{
+    background-color:blueviolet;
+    display: flex;
+    padding-top:85px;
+}
+nav {
+    top:0;
+    left: 0;
+    height: 80px;
+    display: flex;
+    background-color: orange;
+    position: fixed;
+    width: 100%;
+    display: flex; /*must go wit flex direction*/
+    flex-direction: row;
+    text-align:center;
+    align-items:  center;
+   
+    padding-bottom: 15px;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    bottom:0px;
+    left:0px;
+    position: fixed;
+    width: 100%;
+    background-color:olive;
+}
+
+.image{
+    /* top: 10px; */
+    width: 150px;
+    /* border-top: 10px; */
+    margin: 10px;
+
+}
+
+.foo{
+    text-align: center;
+    display: block;
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    
+}
+ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+a {
+
+    text-decoration: none;
+    color: white;
+}
+
+li {
+    
+    margin: 19px;
+    
+}
+.imageSecond{
+float: left;
+width: 150px;
+padding:10px;
+}
+.secondRow{
+    top: 20px;
+    float: right;
+    border: 20%;
+    background-color: brown;
+}
+.mainNav{
+    /* background-color:olive; */
+    display: flex;
+    float : right;
+    justify-content: flex-end;
+    /* margin-bottom: 25px; */
+    
+}
+.rest {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    top:0px;
+    bottom:0px;
+    background-color: darkblue;
+    margin-left: 25px;
+    margin-right: 25px;
+    /* padding-top: 20px; */
+    color:white
+}
+.firstP{
+    margin: 20px;
+    display:flex;
+    justify-content: space-evenly;
+    font-size: 40px;
+}
+.secondP{
+    margin: 80px;
+    display:flex;
+    justify-content: space-evenly;
+    font-size: 54px;
+    font-style: italic;
+}
+h3{
+    font-size: 50px
+}
+.intro{
+    display: flex; 
+    width: 85%;
+}
+/* projects*/
+.allProj{
+    background-color: darkslateblue;
+    float: left;
+    color: black;
+    padding: 3%;
+    /* margin-left: 15%;
+    margin-right: 15%; */
+    margin: 10%;
+}
+.pMiddle{
+    background-color: brown;
+    margin: 20px;
+}
+/* .allProj > .pName{
+    font-size: 24px;
+    padding-bottom: 0;
+} */
+.thirdProj{
+    float: right;
+    background-color: white;
+    bottom: 20%;
+}
+.topLine{
+    font-style: normal;
+    font-size: 25px;
+    color: #FFFFFF;
+}
+.line{
+    border-top: 0.5px solid #090101;
+    padding-top: 2px;
+        /* height: 200px; */
+}
+.line1{
+    border-top: 0.5px white;
+    padding-top: 2px;
+        /* height: 200px; */
+}
+.imageP{
+    text-align: right;
+    width: 100%;
+    width: 150px;
+    bottom: 20PX;
+    
+}
+.pContainer{
+    top: 20;
+    background-color: #FFFFFF;
+    margin-top: 20PX;
+    align-items: center;
+}
+.bFoo{
+    margin:20px;
+}
+/*About page CSS*/
+.allAbout{
+    margin: 15px;
+    background-color: midnightblue;
+    margin-left:65px;
+    color:white;
+}
+.aContainer{
+    margin:20px
+}
+.logo{
+    
+}

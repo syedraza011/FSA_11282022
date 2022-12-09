@@ -1,0 +1,30 @@
+.icon{
+    height:100%;
+    width:30px;
+    background-color: rebeccapurple;
+    position:relative /* so it can be relitive absolute to it's parent*/
+}
+.logo{
+    height: 30pc;
+    width:30px;
+    background-color: rebeccapurple;
+    position: relative; /*to strictly follow it's parent*/
+}
+.flexEx{
+    width: 30;
+    display: flex;
+    align-items: center; 
+    flex-direction: row-reverse; /*rows and columns*/
+    flex-direction: column;
+
+}
+.products{
+    background-color: green; /*so it won't bleed over items */
+    /* height: 90px; */
+    min-height: 90px;
+    width:90px;
+    margin: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-end; /*Horizental line flex*/
+
+}
