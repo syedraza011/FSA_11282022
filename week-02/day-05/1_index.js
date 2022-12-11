@@ -495,26 +495,26 @@ function buildNArray(n) {
 // // getMostVowels,
 //________________________
 
-console.log(alternateCaps("k"));
-function alternateCaps(string) {
-  let newStr = "";
-  if (string.length < 1) {
-    return newStr;
-  }
-  if (typeof string === "string") {
-    for (let i = 0; i < string.length; i++) {
-      let char = string[i];
-      if (i % 2 === 1) {
-        newStr += char.toUpperCase();
-      } else {
-        newStr += char.toLowerCase();
-      }
-    }
-  } else {
-    return "error";
-  }
-  return newStr;
-}
+// console.log(alternateCaps("k"));
+// function alternateCaps(string) {
+//   let newStr = "";
+//   if (string.length < 1) {
+//     return newStr;
+//   }
+//   if (typeof string === "string") {
+//     for (let i = 0; i < string.length; i++) {
+//       let char = string[i];
+//       if (i % 2 === 1) {
+//         newStr += char.toUpperCase();
+//       } else {
+//         newStr += char.toLowerCase();
+//       }
+//     }
+//   } else {
+//     return "error";
+//   }
+//   return newStr;
+// }
 //______________________________________
 /*  4) builds the correct 8x6 table
       5) builds the correct 6x3 table
@@ -561,3 +561,20 @@ function alternateCaps(string) {
 //   console.log("newString length--: " + newStr.length);
 //   return newStr;
 // }
+// Odd Couple
+// Define a function, oddCouple, that accepts an array of numbers as an argument.
+
+// oddCouple should return a new array with the first two odd numbers from the original array:
+
+// oddCouple([1, 2, 3, 4, 5]); // => [1, 3]
+// If fewer than two odd numbers exist in the original array, 
+//return an array with only the one odd number, 
+//or an empty array if there are no odd numbers:
+
+// oddCouple([10, 15, 20]); // => [15]
+// oddCouple(2, 4, 6, 8); // => []
+function oddCouple(arr){
+  for(let i=0;i<arr.length;i++){
+    
+  }
+}
