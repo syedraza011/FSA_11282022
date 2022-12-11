@@ -14,21 +14,21 @@
 //     return fact;
 //     }
 //-----------------------------------------------
-// console.log(buildNArray(5))
-// function buildNArray(n) {
-//     let array = [];
-//     if (n <= 0) {
-//         return array;
-//     } else if (Number.isInteger(n)) {
-//         for (let i = 1; i <= n; i++) {
-//             array.push(i);
-//         }
+console.log(buildNArray(5))
+function buildNArray(n) {
+    let array = [];
+    if (n <= 0) {
+        return array;
+    } else if (Number.isInteger(n)) {
+        for (let i = 1; i <= n; i++) {
+            array.push(i);
+        }
 
-//     } else {
-//         return "error";
-//     }
-//     return array;
-// }
+    } else {
+        return "error";
+    }
+    return array;
+}
 //------------------------------------------------
 
 // findLongestString,
