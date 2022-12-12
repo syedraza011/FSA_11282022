@@ -29,43 +29,56 @@ to see hidden ls -al it will show any hidden folders
 //     return obj;
 //   }
 
-  //------------------
-  const cart = [
-    {
-      name: "Blue Paint",
-      quantity: 10,
-      price: 4.99,
-    },
-    {
-      name: "Red Paint",
-      quantity: 5,
-      price: 4.99,
-    },
-    {
-      name: "Yellow Paint",
-      quantity: 8,
-      price: 4.99,
-    },
-    {
-      name: "16x20in Canvas",
-      quantity: 2,
-      price: 2.99,
-    },
-    {
-      name: "Paintbrush",
-      quantity: 15,
-      price: 1.5,
-    },
-  ];
+//------------------
+const cart = [
+  {
+    name: "Blue Paint",
+    quantity: 10,
+    price: 4.99,
+  },
+  {
+    name: "Red Paint",
+    quantity: 5,
+    price: 4.99,
+  },
+  {
+    name: "Yellow Paint",
+    quantity: 8,
+    price: 4.99,
+  },
+  {
+    name: "16x20in Canvas",
+    quantity: 2,
+    price: 2.99,
+  },
+  {
+    name: "Paintbrush",
+    quantity: 15,
+    price: 1.5,
+  },
+];
 
-  console.log(checkout(cart));
-  function checkout(obj) {
-    let sum=0;
-    for (let key in obj) {
-      console.log(key);
-    sum += obj[key].price*obj[key].quantity;
+console.log(checkout(cart));
+function checkout(obj) {
+  let sum = 0;
+  for (let key in obj) {
+    console.log(key);
+    sum += obj[key].price * obj[key].quantity;
     console.log(obj[key].price);
-    }
-    return sum;
   }
-  //------------
+  return sum;
+}
+//------------
+console.log(analyzeFrequencies("abbca"));
+function analyzeFrequencies(string) {
+  let obj = {};
+  for (let i = 0; i < string.length; i++) {
+    let char = string[i];
+    if (obj[char] > -1) {
+      obj[char] += 1;
+    } else {
+      obj[char] = 1;
+    }
+  }
+  return obj;
+}
