@@ -575,6 +575,8 @@ function buildNArray(n) {
 // oddCouple(2, 4, 6, 8); // => []
 function oddCouple(arr){
   for(let i=0;i<arr.length;i++){
-          
+      if(i===0){
+        return x*yield;
+      }    
   }
 }
