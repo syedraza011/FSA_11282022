@@ -20,3 +20,8 @@
 // } else {
 //     console.log("It is not Calos")
 // }
+
+//DOM
+
+let colorMeEle=document.body.querySelector(".colorMe");
+let score=0;
