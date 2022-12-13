@@ -23,5 +23,12 @@
 
 //DOM
 
-let colorMeEle=document.body.querySelector(".colorMe");
-let score=0;
+let colorMeEle = document.body.querySelector(".colorMe");
+let buttonEle=document.body.getElementsByTagName("button");
+
+buttonEle[0].addEventListener("click",fucntion){
+    //console.log("Clicked")
+    colorMeEle.innerHTML = "Some text";
+colorMeEle.style.color = "red";
+}
+
