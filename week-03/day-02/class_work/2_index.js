@@ -24,11 +24,15 @@
 //DOM
 
 let colorMeEle = document.body.querySelector(".colorMe");
-let buttonEle=document.body.getElementsByTagName("button");
+let buttonEle = document.body.getElementsByTagName("button");
 
-buttonEle[0].addEventListener("click",fucntion){
-    //console.log("Clicked")
-    colorMeEle.innerHTML = "Some text";
-colorMeEle.style.color = "red";
-}
-
+buttonEle[0].addEventListener("click", function () {
+  //console.log("Clicked")
+  colorMeEle.innerHTML = "Some text";
+  colorMeEle.style.color = "red";
+  //colorMeEle.getAttribute
+});
+let newEle = document.createElement("p");
+newEle.innerHTML = "this is a paragraph";
+//appending is when you add an aelement to DOM
+document.body.appendChild(newEle);
