@@ -1,0 +1,22 @@
+body{
+  /* background-color: blue; */
+}
+.grandParent{
+  border: 25px solid brown;
+background-color: brown;
+}
+.parent{
+  background-color: aqua;
+  border: 15px solid black;
+}
+.child{
+  width: 200px;
+  height: 200px;
+  background-color: wheat;
+  border: 15px solid green;
+  padding: 15px;
+
+  display: flex;
+  
+  flex-flow: column;
+}
