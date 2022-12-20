@@ -1,48 +1,59 @@
-//alert("hello");
-const myElement=document.body.querySelector('h1')
-//class based approach
+console.log('Hello!');
+const myElement = document.body.querySelector('h1');
+
+// Class based approach
 class Animal {
-    constructor (name,age){
-        this.name=name;
-        this.age=age;
-    }
-    prettyprint(){
-        return 'The name of this animals is:'+this.name
-    }
-    speak(){
-        return 'Generic Animal Sounds';
-    }
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  prettyPrint() {
+    return 'The name of this animal is: ' + this.name;
+  }
+  speak() {
+    return 'Generic animal sounds';
+  }
 }
-const myAnimal=new Animal('Dog',5);
-myElement.innerHTML=myAnimal.name;
-// function factory way 
-function creatAnimal(name,age){
-    return {
-        name,
-        age,
-   
-    prettyPrint: function (){
-        return 'The name of this animals is:'+name;
-    }
-};
-}
-const myAnimalTwo=creatAnimal("luke's Dog",0);
-myElement.innerHTML=myAnimalTwo.prettyPrint();
 
-class Dog extends Aniamls {
-    constructor(name,age,hairColor){
-        super(name,age);
-        this.hairColor=hairColor;
-    }
-    bark(){
-        return 'bark bark'+this.name+'Age:'+this.age
-    }
-}
-const dog= new Dog('selene',0);
-const dog2= new Dog('George',10)
-const oldDog= new Dog('George',10)
-console.log(dog2===oldDog);
-console.log(dog2.name===oldDog.name);
+const myAnimal = new Animal('Dog', 5);
 
-myElement.innerHTML=dog.bark();
-myElement.innerHTML=dog.bark();
+myElement.innerHTML = myAnimal.name;
+
+// Function factory
+function createAnimal(name, age) {
+  return {
+    name,
+    age,
+    prettyPrint: function () {
+      return 'The name of this animal is: ' + name;
+    },
+  };
+}
+
+const myAnimalTwo = createAnimal("Luke's Dog", 0);
+
+myElement.innerHTML = myAnimalTwo.prettyPrint();
+
+// Dog class
+class Dog extends Animal {
+  constructor(name, age, hairColor) {
+    super(name, age);
+    this.hairColor = hairColor;
+  }
+  speak() {
+    return 'Bark bark ' + this.name + ' Age: ' + this.age;
+  }
+}
+
+const dog = new Dog('Selene', 0);
+dog.name = 'Selene 2';
+
+const dog2 = new Dog('George', 10);
+const olderDog = new Dog('George', 11);
+console.log(dog2 == olderDog);
+console.log(dog2.name === olderDog.name);
+console.log(dog2.name == olderDog.name);
+console.log(new Dog('Selene', 0) === new Dog('Selene', 0));
+
+myElement.innerHTML = dog.speak();
+myElement.innerHTML = dog.prettyPrint();
