@@ -110,12 +110,34 @@ function otherAdder(x) {
 }
 
 const add2 = adder(2);
-console.log(add2);
+// console.log(add2);
 const add4 = adder(4);
-console.log(add2);
+// console.log(add2);
 const num1 = add2(5); // What will num1 be?
-console.log(num1);
+//console.log(num1);
 const num2 = add4(5); // What will num2 be?
 console.log(num1);
 const mult=mutliplier(3)
+const multi=mutliplier(4)
 console.log(mult);
+
+const reverseString = (s) => {
+  let str = "";
+  for (let i = s.length - 1; i >= 0; i--) {
+    
+    str += s[i];
+  }
+  return str;
+};
+console.log(reverseString("abcd"));
+
+
+const sumArray = (arr) => {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+    console.log(sum)
+  }
+  return sum;
+};
+console.log(sumArray[10,5,5,15]);
