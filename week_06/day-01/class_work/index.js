@@ -1,28 +1,28 @@
-//alert("hello");
-let btn_01 = document.body.querySelector(".btn_01");
-let grandparent = document.body.querySelector(".grandParent");
+// //alert("hello");
+// let btn_01 = document.body.querySelector(".btn_01");
+// let grandparent = document.body.querySelector(".grandParent");
 
-let parents = document.body.querySelectorAll(".parent");
-console.log(parents);
-//let children = document.querySelectorAll(".");
-let child = parents[0].children;
-console.log(child);
-function changeColor(container) {
-  parents.forEach((parent) => (parent.style.background = "blue"));
-  console.log("Hello");
-}
-function removeColor(item) {
-  item.style.backgroundColor = "gray";
-}
-btn_01.addEventListener("click", function () {
-  //console.log(child[i]);
-  changeColor(parents.ch);
-  // removeColor(child[0]);
-});
+// let parents = document.body.querySelectorAll(".parent");
+// console.log(parents);
+// //let children = document.querySelectorAll(".");
+// let child = parents[0].children;
+// console.log(child);
+// function changeColor(container) {
+//   parents.forEach((parent) => (parent.style.background = "blue"));
+//   console.log("Hello");
+// }
+// function removeColor(item) {
+//   item.style.backgroundColor = "gray";
+// }
+// btn_01.addEventListener("click", function () {
+//   //console.log(child[i]);
+//   changeColor(parents.ch);
+//   // removeColor(child[0]);
+// });
 
-function allAppend(variable) {
-  variable.appendChild();
-}
+// function allAppend(variable) {
+//   variable.appendChild();
+// }
 // const stuffEle = document.body.querySelector(".stuff");
 // const building = {
 //   height: "5'",
@@ -73,3 +73,49 @@ function allAppend(variable) {
 // newBuildingTwo.addClassroom(10);
 // newBuildingTwo.rooms=newBuildingTwo.classrooms+5;
 // stuffEle.innerHTML = newBuildingTwo.print_rooms();
+const fnA = () => {
+  return "A" + fnB();
+};
+
+const fnB = () => {
+  return "B" + fnC();
+};
+
+const fnC = () => {
+  return "C";
+};
+
+console.log(fnA());
+
+const factorial = (n) => {
+  // Base Case
+  if (n <= 1) {
+    return 1;
+  }
+  // Recursive Case
+  else {
+    return n * factorial(n - 1);
+  }
+};
+
+console.log(factorial(0)); // => 6
+
+const adder = (x) => (y) => x + y+8;
+const mutliplier = (x) => (y) => x*y;
+// Here is the same function written without arrow syntax
+function otherAdder(x) {
+  return function (y) {
+    return x + y;
+  };
+}
+
+const add2 = adder(2);
+console.log(add2);
+const add4 = adder(4);
+console.log(add2);
+const num1 = add2(5); // What will num1 be?
+console.log(num1);
+const num2 = add4(5); // What will num2 be?
+console.log(num1);
+const mult=mutliplier(3)
+console.log(mult);
