@@ -135,6 +135,8 @@
 // }
 // const admin1 = new AdminClass("username", null, true, 1);
 // console.log(admin1);
+
+//recurssion
 const fabonacci=(num)=>{
   if (num<=0)
     return 0;
@@ -142,3 +144,11 @@ const fabonacci=(num)=>{
   return fabonacci(num-2)+fabonacci(num-1)
 }
 console.log(fabonacci(10));
+//HOF/ CB
+const calculator=(num1,num2,op)=>{
+return cb(num1,num2);
+}
+const add=(num1,num2)=>{
+  return num1+num2;
+}
+console.log(calculator(1,2,add));
