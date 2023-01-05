@@ -237,3 +237,35 @@ const arr = [
     gender: "Male",
   },
 ];
+//for each //next level
+arr.forEach((element, index, array)=>{
+  console.log('ele',element);
+  console.log('index',index);
+  console.log('array',array);
+});
+const funcarr=[
+  function example1(){return 'Hello World'},
+  function example2(){return 'hello i am also world'}
+]
+const funcArrFilter=funcarr.filter((element)=>{
+const run=element();
+console.log(run);
+return run==='hello world';
+});
+//we run a T_F , if true add to new array 
+const filteredArr=arr.filter((element)=>{
+return element.gender==='Female';
+});
+console.log(filteredArr)
+
+//map
+for(let i=0;i<arr.length;i++){
+  arr[i].gender=arr[i].gender[0];
+}
+console.log("gender update",arr)
+
+const mappedArr=arr.map((element)=>{
+  return newGender=element.gender[0];
+  return newGender;
+})
+console.log("Map version",mappedArr)
