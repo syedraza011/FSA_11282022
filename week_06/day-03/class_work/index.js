@@ -137,18 +137,103 @@
 // console.log(admin1);
 
 //recurssion
-const fabonacci=(num)=>{
-  if (num<=0)
-    return 0;
-  if(num===1) return 1;
-  return fabonacci(num-2)+fabonacci(num-1)
-}
+const fabonacci = (num) => {
+  if (num <= 0) return 0;
+  if (num === 1) return 1;
+  return fabonacci(num - 2) + fabonacci(num - 1);
+};
 console.log(fabonacci(10));
 //HOF/ CB
-const calculator=(num1,num2,op)=>{
-return cb(num1,num2);
-}
-const add=(num1,num2)=>{
-  return num1+num2;
-}
-console.log(calculator(1,2,add));
+const calculator = (num1, num2, cb) => {
+  return cb(num1, num2);
+};
+const add = (num1, num2) => {
+  return num1 + num2;
+};
+const sub = (num1, num2) => {
+  return num1 - num2;
+};
+const mul = (num1, num2) => {
+  return num1 * num2;
+};
+const div = (num1, num2) => {
+  return num1 / num2;
+};
+console.log(calculator(1, 2, add));
+console.log(calculator(1, 2, sub));
+console.log(calculator(1, 2, mul));
+console.log(calculator(1, 2, div));
+
+//using built-In
+const arr = [
+  {
+    id: 1,
+    first_name: "Glenn",
+    last_name: "Tatlowe",
+    email: "gtatlowe0@bing.com",
+    gender: "Bigender",
+  },
+  {
+    id: 2,
+    first_name: "Julio",
+    last_name: "Leyban",
+    email: "jleyban1@skyrock.com",
+    gender: "Male",
+  },
+  {
+    id: 3,
+    first_name: "Roselia",
+    last_name: "Duxbarry",
+    email: "rduxbarry2@webnode.com",
+    gender: "Female",
+  },
+  {
+    id: 4,
+    first_name: "Hedvige",
+    last_name: "De Gregoli",
+    email: "hdegregoli3@jugem.jp",
+    gender: "Female",
+  },
+  {
+    id: 5,
+    first_name: "Jean",
+    last_name: "Yellep",
+    email: "jyellep4@cdc.gov",
+    gender: "Female",
+  },
+  {
+    id: 6,
+    first_name: "April",
+    last_name: "Weatherhead",
+    email: "aweatherhead5@opensource.org",
+    gender: "Female",
+  },
+  {
+    id: 7,
+    first_name: "Arabel",
+    last_name: "Davy",
+    email: "adavy6@phoca.cz",
+    gender: "Female",
+  },
+  {
+    id: 8,
+    first_name: "Cassi",
+    last_name: "Jinkins",
+    email: "cjinkins7@npr.org",
+    gender: "Female",
+  },
+  {
+    id: 9,
+    first_name: "Coralyn",
+    last_name: "Penelli",
+    email: "cpenelli8@columbia.edu",
+    gender: "Female",
+  },
+  {
+    id: 10,
+    first_name: "Jayson",
+    last_name: "Schwandner",
+    email: "jschwandner9@ocn.ne.jp",
+    gender: "Male",
+  },
+];
