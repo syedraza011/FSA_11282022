@@ -238,34 +238,71 @@ const arr = [
   },
 ];
 //for each //next level
-arr.forEach((element, index, array)=>{
-  console.log('ele',element);
-  console.log('index',index);
-  console.log('array',array);
+arr.forEach((element, index, array) => {
+  console.log("ele", element);
+  console.log("index", index);
+  console.log("array", array);
 });
-const funcarr=[
-  function example1(){return 'Hello World'},
-  function example2(){return 'hello i am also world'}
-]
-const funcArrFilter=funcarr.filter((element)=>{
-const run=element();
-console.log(run);
-return run==='hello world';
+const funcarr = [
+  function example1() {
+    return "Hello World";
+  },
+  function example2() {
+    return "hello i am also world";
+  },
+];
+const funcArrFilter = funcarr.filter((element) => {
+  const run = element();
+  console.log(run);
+  return run === "hello world";
 });
-//we run a T_F , if true add to new array 
-const filteredArr=arr.filter((element)=>{
-return element.gender==='Female';
+//we run a T_F , if true add to new array
+const filteredArr = arr.filter((element) => {
+  return element.gender === "Female";
 });
-console.log(filteredArr)
+console.log(filteredArr);
 
 //map
-for(let i=0;i<arr.length;i++){
-  arr[i].gender=arr[i].gender[0];
+for (let i = 0; i < arr.length; i++) {
+  arr[i].gender = arr[i].gender[0];
 }
-console.log("gender update",arr)
+console.log("gender update", arr);
 
-const mappedArr=arr.map((element)=>{
-  return newGender=element.gender[0];
-  return newGender;
-})
-console.log("Map version",mappedArr)
+const mappedArr = arr.map((element) => {
+  return (newGender = element.gender[0]);
+  //return newGender;
+  return {
+    id: element.id,
+    first_name: element.first_name,
+    last_name: element.last_name,
+    email: element.email,
+    gender: newGender,
+  };
+});
+console.log("Map version", mappedArr);
+
+//DOM Map Example
+const body = document.querySelector("body");
+console.log(body);
+//make the HTMl for the people to be displayed
+//run that fucntion x times for the array
+const cardMaker = (user) => {
+  const container = document.createElement("div");
+  const fname = document.createElement("h3");
+  const lname = document.createElement("h3");
+  const email = document.createElement("h3");
+  const gender = document.createElement("h3");
+  //make pieces
+  //add content
+  fname.innerHTML = user.first_name;
+  lname.innerHTML = user.last_name;
+  email.innerHTML = user.email;
+  gender.innerHTML = user.gender;
+  container.append(fname);
+  container.append(lname);
+  container.append(email);
+  container.append(gender);
+  //combine
+
+  arr.map();
+};
