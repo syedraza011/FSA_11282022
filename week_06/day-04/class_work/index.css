@@ -1,0 +1,15 @@
+body{
+  background-color: blue;
+}
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid black;
+}
+/*
+this is just an update on my code
+i will add another line for a streak
+we will do another streak
+*/

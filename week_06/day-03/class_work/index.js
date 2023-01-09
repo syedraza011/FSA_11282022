@@ -229,9 +229,9 @@ const arr = [
     email: "cpenelli8@columbia.edu",
     gender: "Female",
   },
-  {
-    id: 10,
-    first_name: "Jayson",
+  {//element
+    id: 10, //element.id
+    first_name: "Jayson", //element.first_name
     last_name: "Schwandner",
     email: "jschwandner9@ocn.ne.jp",
     gender: "Male",
@@ -269,7 +269,7 @@ for (let i = 0; i < arr.length; i++) {
 console.log("gender update", arr);
 
 const mappedArr = arr.map((element) => {
-  return (newGender = element.gender[0]);
+  newGender = element.gender[0];
   //return newGender;
   return {
     id: element.id,
@@ -283,7 +283,7 @@ console.log("Map version", mappedArr);
 
 //DOM Map Example
 const body = document.querySelector("body");
-console.log(body);
+//console.log(body);
 //make the HTMl for the people to be displayed
 //run that fucntion x times for the array
 const cardMaker = (user) => {
@@ -304,5 +304,8 @@ const cardMaker = (user) => {
   container.append(gender);
   //combine
 
-  arr.map();
-};
+  arr.map((element) => {
+    const card = cardMaker(element);
+    body.append(card);
+  });
+

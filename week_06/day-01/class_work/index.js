@@ -157,58 +157,58 @@
 // }
 
 // console.log(fibonacci(8))
-let incVowels = 0;
-let nonVowels = 0;
-let arr = ["hello", "eee","hyg","hdsfdsdfs","lll","jjjj","e","thg"];
+// let incVowels = 0;
+// let nonVowels = 0;
+// let arr = ["hello", "eee","hyg","hdsfdsdfs","lll","jjjj","e","thg"];
 
-for (let i = 0; i < arr.length; i++) {
-  let word = arr[i]; // the
-  if (findVowels(word)) {
-    incVowels += 1;
-  } else {
-    nonVowels += 1;
-  }
-}
-console.log("Vowele Words  =" + incVowels);
-console.log("Non-Vowel Words =" + nonVowels);
+// for (let i = 0; i < arr.length; i++) {
+//   let word = arr[i]; // the
+//   if (findVowels(word)) {
+//     incVowels += 1;
+//   } else {
+//     nonVowels += 1;
+//   }
+// }
+// console.log("Vowele Words  =" + incVowels);
+// console.log("Non-Vowel Words =" + nonVowels);
 
-function findVowels(word) {
-  let vowels = "AEIOUaeiou";
-  let flag = false;
-  for (let i = 0; i < word.length; i++) {
-    let char = word[i];
-    if (vowels.includes(char)) {
-      flag = true;
-    }
-  }
-  return flag;
-}
+// function findVowels(word) {
+//   let vowels = "AEIOUaeiou";
+//   let flag = false;
+//   for (let i = 0; i < word.length; i++) {
+//     let char = word[i];
+//     if (vowels.includes(char)) {
+//       flag = true;
+//     }
+//   }
+//   return flag;
+// }
 
 
 
-<script>
-	// Javascript program to calculate the standard deviation of an array
-	function dev(arr){
-	// Creating the mean with Array.reduce
-	let mean = arr.reduce((acc, curr)=>{
-		return acc + curr
-	}, 0) / arr.length;
+// <script>
+// 	// Javascript program to calculate the standard deviation of an array
+// 	function dev(arr){
+// 	// Creating the mean with Array.reduce
+// 	let mean = arr.reduce((acc, curr)=>{
+// 		return acc + curr
+// 	}, 0) / arr.length;
 	
-	// Assigning (value - mean) ^ 2 to every array item
-	arr = arr.map((k)=>{
-		return (k - mean) ** 2
-	})
+// 	// Assigning (value - mean) ^ 2 to every array item
+// 	arr = arr.map((k)=>{
+// 		return (k - mean) ** 2
+// 	})
 	
-	// Calculating the sum of updated array
-	let sum = arr.reduce((acc, curr)=> acc + curr, 0);
+// 	// Calculating the sum of updated array
+// 	let sum = arr.reduce((acc, curr)=> acc + curr, 0);
 	
-	// Calculating the variance
-	let variance = sum / arr.length
+// 	// Calculating the variance
+// 	let variance = sum / arr.length
 	
-	// Returning the standard deviation
-	return Math.sqrt(sum / arr.length)
-	}
+// 	// Returning the standard deviation
+// 	return Math.sqrt(sum / arr.length)
+// 	}
 	
-	console.log(dev([1, 2, 3, 4, 5]))
-	console.log(dev([23, 4, 6, 457, 65, 7, 45, 8]))
-</script>
+// 	console.log(dev([1, 2, 3, 4, 5]))
+// 	console.log(dev([23, 4, 6, 457, 65, 7, 45, 8]))
+// </script>
