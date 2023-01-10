@@ -11,26 +11,38 @@
 //     }
 //     console.log(higherOrLower(5, 6))
 //
-// let movies1=["abc","cba","tba","mcg"];
-// let movies2=["azc","mba","mba","gcg"];
-// let movies3=["hzc","xba","bba","acg"];
-// console.log( dvdCollection(movies1, movies2, movies3));
-//     function dvdCollection(movies1, movies2, movies3){
-//         let newArr=[];
-//         let str='';
-//         str+=movies1+","+movies2+","+movies3;
-//         newArr.push(str);
-//         function myFunction(){
-//         let sortedArray=newArr.sort(function(a,b){
-//             if(a<b)return -1;
-//             if(a>b)return 1;
-//             return 0;
-//         });
-//         console.log(sortedArray)
-//     }
+let movies1=["abc","cba","tba","mcg"];
+let movies2=["azc","mba","mba","gcg"];
+let movies3=["hzc","xba","bba","acg"];
+console.log( dvdCollection(movies1, movies2, movies3));
+    function dvdCollection(movies1, movies2, movies3){
+        let newArr=[];
+   for(let i=0;i<movies1.length;i++){
+    newArr.push(movies1[i]);
+   }
+   for(let i=0;i<movies2.length;i++){
+    newArr.push(movies1[i]);
+   }
+   for(let i=0;i<movies3.length;i++){
+    newArr.push(movies1[i]);
+   }
+
+       console.log(newArr)
+        newArr.sort((a, b) => {
+            if (a > b) {
+                return +1
+            } else
+                if (a < b) {
+                    return -1
+                } else {
+                    return 0
+                }
+        })
+    //     console.log(sortedArray)
+    // }
     
-//         return newArr;
-//     }
+        return newArr;
+    }
 //     let studentsObj=[
 //         { name: "Stella", age: 25, grade: 11 },
 //         { name: "Mohammed", age: 31, grade: 13 },
@@ -77,29 +89,29 @@
 
 // fruitBasket(fruitNames: string[])` is a function that takes an array of strings as an argument, 
 // where each string is the name of a fruit. 
-let arr=["pear", "apple", "banana"];
-console.log(fruitBasket(arr));
-function fruitBasket(arr){
-    let newObj = [];
-arr.forEach(element => {
-    let fruitObj={};
-    fruitObj["name"]=element;
-    fruitObj["weight"]=weight();
-    fruitObj["eat"]=eat(element);
-    fruitObj["throwAway"]=throwAway (element);
-newObj.push(fruitObj);
-});
-return newObj;
-}
-function weight(){
-    return Math.floor(Math.random() * 10+1);
-}
-function eat (singlefruit){
-    return `You ate a${singlefruit}!`;
-}
-function throwAway (singlefruit){
-    return `You threw away a ${singlefruit}!`
-}
+// let arr=["pear", "apple", "banana"];
+// console.log(fruitBasket(arr));
+// function fruitBasket(arr){
+//     let newObj = [];
+// arr.forEach(element => {
+//     let fruitObj={};
+//     fruitObj["name"]=element;
+//     fruitObj["weight"]=weight();
+//     fruitObj["eat"]=eat(element);
+//     fruitObj["throwAway"]=throwAway (element);
+// newObj.push(fruitObj);
+// });
+// return newObj;
+// }
+// function weight(){
+//     return Math.floor(Math.random() * 10+1);
+// }
+// function eat (singlefruit){
+//     return `You ate a${singlefruit}!`;
+// }
+// function throwAway (singlefruit){
+//     return `You threw away a ${singlefruit}!`
+// }
 
 
 
@@ -180,20 +192,21 @@ function throwAway (singlefruit){
 //  as an argument and return the correct change in coins. 
 //  The function should return an object with the number of 
 //  quarters, dimes, nickels, and pennies needed to make the change.
-let cents=99;
-console.log(coinMachine(cents))
-function coinMachine(cents){
-    let coinObj={};
-let quarter=Math.floor(cents/25);
-coinObj["Quarter"]=quarter;
-cents -=25*quarter;
-let dime=Math.floor(cents/10);
-coinObj["Dime"]=dime;
-cents -=10*dime;
-let nickel = Math.floor(cents/5);
-coinObj["Nickel"]=nickel;
-    cents -= 5*nickel;
+// let cents=99;
+// console.log(coinMachine(cents))
+// function coinMachine(cents){
+//     let coinObj={};
+// let quarter=Math.floor(cents/25);
+// coinObj["Quarter"]=quarter;
+// cents -=25*quarter;
+// let dime=Math.floor(cents/10);
+// coinObj["Dime"]=dime;
+// cents -=10*dime;
+// let nickel = Math.floor(cents/5);
+// coinObj["Nickel"]=nickel;
+//     cents -= 5*nickel;
 
-    let penny = cents;
-    console.log(`Quarters: ${quarter}, Dimes: ${dime}, Nickels: ${nickel},Pennies: ${penny}`)
-}
+//     let penny = cents;
+//     // console.log(`Quarters: ${quarter}, Dimes: ${dime}, Nickels: ${nickel},Pennies: ${penny}`)
+// return coinObj;
+// }
