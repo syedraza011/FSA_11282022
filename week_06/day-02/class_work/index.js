@@ -180,6 +180,20 @@ function throwAway (singlefruit){
 //  as an argument and return the correct change in coins. 
 //  The function should return an object with the number of 
 //  quarters, dimes, nickels, and pennies needed to make the change.
-function coinMachine(num){
+let cents=99;
+console.log(coinMachine(cents))
+function coinMachine(cents){
+    let coinObj={};
+let quarter=Math.floor(cents/25);
+coinObj["Quarter"]=quarter;
+cents -=25*quarter;
+let dime=Math.floor(cents/10);
+coinObj["Dime"]=dime;
+cents -=10*dime;
+let nickel = Math.floor(cents/5);
+coinObj["Nickel"]=nickel;
+    cents -= 5*nickel;
 
+    let penny = cents;
+    console.log(`Quarters: ${quarter}, Dimes: ${dime}, Nickels: ${nickel},Pennies: ${penny}`)
 }
