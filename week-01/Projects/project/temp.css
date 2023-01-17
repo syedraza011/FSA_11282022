@@ -1,0 +1,22 @@
+.grid {
+    background-color: aquamarine;
+    width: 606px;
+    height:606px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 90px;
+}
+.square {
+    border-radius: 60%;
+    height:200px;
+    width: 200px;
+    border-style: solid;
+    border:solid black 1px;
+    
+}
+.mole {
+    /* background-color: blue; */
+    background-image: url(/images/mole.png);
+    background-size: cover;
+}
