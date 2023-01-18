@@ -1,15 +1,109 @@
-body{
-   background-color: rgb(206, 206, 215); */
-}
 html, body {
    height: 100%;
    width: 100%;
-}
-body {
+ }
+ 
+ body {
    background-color: blue;
-   color: azure;
-}
-h1{
+   color: white;
+ }
+ 
+ h1 {
    font-size: 50px;
-   font-family: Arial, Helvetica, sans-serif;
-}
+   font-family: Arial, Helvetica, sans-serif
+ }
+ 
+ h2 {
+   color: orange;
+ }
+ 
+ .mydiv {
+   background-color: lightblue;
+   color: black;
+ }
+ 
+ .mydiv p {
+   color: red;
+   font-size: 20px;
+   font-family: Arial, Helvetica, sans-serif
+ }
+ 
+ .mydiv .mytext {
+   background-color: black;
+   color: lightgreen;
+   font-size: 20px;
+   font-family: Arial, Helvetica, sans-serif
+ }
+ 
+ * {
+   box-sizing: border-box;
+ }
+ 
+ #customId {
+   text-align: center;
+ }
+ 
+ #customId button {
+   color: white;
+ }
+ 
+ .centered {
+   text-align: center;
+ }
+ 
+ /* .backgroundBlack button {
+   background-color: black;
+ } */
+ 
+ button {
+   color: white;
+   background-color: black;
+   margin: 10px;
+ }
+ 
+ .textRed button {
+   color: red;
+ }
+ 
+ .button1 {
+   background-color:  #b37feb
+ }
+ 
+ .button2 {
+   color: white;
+ /*   box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.5); */
+ /*   box-shadow: 0px 60px 40px -7px rgba(0, 0, 0, 0.2); */
+ }
+ 
+ .button2:hover {
+   box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.5);
+   transition: 0.3s;
+ }
+ 
+ .boxShadowDiv {
+   background-color: white;
+   height: 500px;
+ }
+ 
+ .flexbox {
+   height: 500px;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   /* Defaults to row (left to right) */
+   flex-direction: row-reverse;
+ }
+ 
+ .flexbox button {
+   height: 30px;
+ }
+ 
+ /* Any screen size larger than 500 will not use this CSS */
+ @media screen and (max-width: 500px) and (min-width: 400px) {
+   h1 {
+     font-size: 10px;
+   }
+ }
+ 
+ 
