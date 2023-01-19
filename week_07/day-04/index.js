@@ -1,95 +1,74 @@
-// // // alert("hello");
+const items = [
+  { id: "first", title: "First article", image: "./first.jpeg" },
+  { id: "second", title: "Second article", image: "./second.jpeg" },
+  { id: "third", title: "Third article", image: "./third.jpeg" },
+];
 
-// // let flag= document.getElementById('.sub').addEventListener("click", function() {
-// //    clicked = true
+// body selector
+const body = document.querySelector("body");
+const section = document.querySelector("section");
+const form = document.querySelector("form");
+const first = document.querySelector("#first");
 
-// // });
+// const other = Array.from(document.querySelectorAll('div'));
+// console.log(document.querySelectorAll('div'));
+// console.log(other);
 
-// // if(clicked){
-// //     // <input id="comitted" >Hello</input>
-// // }
-// // let container = document.querySelector(".sub");
-// // console.log(container);
-// // const commit_Btn = document.querySelector(".btn");
-// // console.log(commit_Btn);
-// // let input = document.querySelector("#input");
-// // console.log(input);
-// // commit_Btn.addEventListener("click", function (event) {
-// //   event.preventDefault();
+// need to fill in the divs to create:
+{
+  /* <div>
+    <h3></h3>
+    <img />
+</div> */
+}
+console.log(document);
 
-// //   container.appendChild(input);
-// // // });
-// // let author_header = "";
-// // let btn = document.querySelector("#butn");
-// // let x = document.getElementById("author");
-// // btn.addEventListener("click", function (e) {
-// // e.preventDefault()
-// //   //classList.add name if clicked
-// //   //class of hidden
-// //   //in css display none  by difault
-// //   // clicking event listner , classlist.remove from auhtor
-// //   //
-// //   author_header = x.value;
-// //   console.log(author_header);
-// //   return author;
-// // });
-// // const body=document.querySelector("body");
-// // const container = document.createElement("div");
-// // body.append(container);
-// // // console.log(x.);
+function createCard(obj) {
+  const div = document.querySelector(`#${obj.id}`);
+  // console.log(div);
 
-// // const author = document.createElement("h3");
-// // console.log(author_header);
-// // container.append(author);
+  // create elements
+  const title = document.createElement("h3");
+  const img = document.createElement("img");
 
-// // author.innerText = author_header;
-// // console.log(author)
+  // push the values in
+  title.innerHTML = obj.title;
 
-// // // console.log(author)
-// // // container.innerHTML = x.value;
-// // // console.log(author.value);
+  img.src = obj.image;
+  img.alt = obj.title;
+  console.log(title);
+  console.log(img);
 
-// // // console.log(container);
-// // container.append(author_header);
-// let clicked = false;
-// let flag = document
+  // add css
+  img.style.border = "5px solid red";
+  title.style.border = "5px solid green";
 
-  
-//     // clicked = true;
-//     // console.log(clicked);
-//     // var submit = document.getElementsByTagName('butn')[0];
-//     // submit.onclick = function() {
-//     //     alert("Button pressed!");
-//     // }
-// let btn = document.querySelector("#butn");
-// console.log(btn);
-// let input = document.querySelector("#author");
-// let body = document.querySelector("body");
-// let title = document.createElement("div");
-// title.setAttribute("id", "divSubmit");
-// body.append(title);
-// btn.addEventListener("click", function (e) {
-//   e.preventDefault();
-//   title.innerHTML = input.value;
-// });
-// // function onButtonClick(){
-// //     document.getElementById('textInput').className="show";
+  // img {
+  //     border: '';
+  // }
 
-// //   }
-//   // window.onclick = function(e)
-//   //   {   var id =  e.target.id;   
-//   //    if (id === 'sent')  
-//   //    { var txt = document.getElementById('example').value    
-//   //      $( "#para" ).empty().append( txt );
-//   //    }
-//   //   }
-let btn=document.querySelector("#butn");
-let input=document.querySelector("#author");
-let body=document.querySelector("body");
-let title=document.createElement("div");
-title.setAttribute("id","divSubmit");
-body.append(title);
-btn.addEventListener("click",function(e){
-e.preventDefault();
-title.innerHTML=input.value;
-})
+  // append
+  div.append(title);
+  div.append(img);
+}
+// createCard(items[0]);
+
+// if we have to do something several times, probably a loop will help
+items.forEach((item) => {
+  // console.log(item);
+  createCard(item);
+});
+
+body.addEventListener("dblclick", () => {
+  console.log("Clicked the body!");
+});
+
+section.addEventListener("click", () => {
+  console.log("Clicked the section!");
+});
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  console.log("Submitted the form!");
+  console.log(e);
+});
