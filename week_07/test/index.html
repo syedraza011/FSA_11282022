@@ -1,0 +1,122 @@
+<!-- onst items = [{ id: 'first', title: 'First article', image: './first.jpeg' }, { id: 'second', title: 'Second article', image: './second.jpeg' }, { id: 'third', title: 'Third article', image: './third.jpeg' }];
+
+// body selector
+const body = document.querySelector('body');
+const section = document.querySelector('section');
+const form = document.querySelector('form');
+const first = document.querySelector('#first');
+const second = document.querySelector('#second');
+const third = document.querySelector('#third');
+const selectors = [first, second, third];
+const url = '../images/49650172483_e00ecebf26_b.jpg';
+
+// const other = Array.from(document.querySelectorAll('div'));
+// console.log(document.querySelectorAll('div'));
+// console.log(other);
+
+// need to fill in the divs to create:
+{/* <div>
+    <h3></h3>
+    <img />
+</div> */}
+    console.log(document);
+
+
+const imageExample = document.createElement('img');
+console.log(imageExample);
+// imageExample.src = url;
+// body.append(imageExample);
+
+function createCard(obj) {
+    const div = document.querySelector(`#${obj.id}`);
+    // console.log(div);
+
+    // create elements
+    const title = document.createElement('h3');
+    const img = document.createElement('img');
+
+    // push the values in
+    title.innerHTML = obj.title;
+
+    img.src = obj.image;
+    img.alt = obj.title;
+    console.log(title);
+    console.log(img);
+
+    // add css
+    img.style.border = '5px solid red';
+    title.style.border = '5px solid green';
+
+    // img {
+    //     border: '';
+    // }
+
+    // append
+    div.append(title);
+    div.append(img);
+}
+// createCard(items[0]);
+
+function toggleContent(className, element) {
+    element.classList.toggle(className);
+}
+
+// if we have to do something several times, probably a loop will help
+items.forEach((item) => {
+    // console.log(item);
+    createCard(item);
+});
+
+body.addEventListener('dblclick', () => {
+    console.log('Clicked the body!');
+});
+
+section.addEventListener('click', () => {
+    console.log('Clicked the section!');
+
+    const child = section.removeChild(first);
+    console.log(child);
+});
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    selectors.forEach((element) => {
+        console.log(element);
+        toggleContent('hide', element);
+    });
+    console.log('Submitted the form!');
+});
+
+const aTags = document.querySelectorAll('a');
+const aTagArr = Array.from(aTags);
+console.log(aTags);
+console.log(aTagArr); -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <title>Coffee Clicker</title>
+</head>
+
+<body>
+  <div class="column-container">
+    <div class="column">
+      <div class="container left">
+        <div class="counter-container">Coffee: <span id="coffee_counter">0</span></div>
+        <div class="cps-container"><span id="cps">0</span> coffee/second</div>
+        <div id="big_coffee">☕️</div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="column-header">Coffee Producers</div>
+      <div class="container right" id="producer_container">
+      </div>
+    </div>
+  </div>
+    <script  src="index.js"></script>
+</body>
+
+</html>
