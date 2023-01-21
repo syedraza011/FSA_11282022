@@ -1,200 +1,99 @@
-const bookData = [
-  {
-    author: ["Burroughs, Edgar Rice"],
-    language: "en",
-    subject: [
-      "Adventure stories",
-      "PZ",
-      "Fantasy fiction",
-      "Tarzan (Fictitious character) -- Fiction",
-      "PS",
-      "Jungle animals -- Fiction",
-    ],
-    title: "The Beasts of Tarzan",
-  },
-  {
-    author: ["Anonymous"],
-    language: "en",
-    subject: [
-      "Picture books for children",
-      "PZ",
-      "Children's stories",
-      "Domestic animals -- Juvenile fiction",
-    ],
-    title: "Familiar Animals",
-  },
-  {
-    author: ["Samachson, Joseph"],
-    language: "en",
-    subject: [
-      "Mars (Planet) -- Fiction",
-      "Science fiction",
-      "Bureaucrats -- Fiction",
-      "Dogs -- Fiction",
-      "Families -- Fiction",
-      "Predatory animals -- Fiction",
-      "Short stories",
-      "PS",
-    ],
-    title: "Monster",
-  },
-  {
-    author: ["Bullen, Frank Thomas"],
-    language: "en",
-    subject: ["Sea stories", "PR", "Seafaring life", "Marine animals"],
-    title: "Idylls of the Sea, and Other Marine Sketches",
-  },
-  {
-    author: ["Burroughs, Edgar Rice"],
-    language: "fi",
-    subject: [
-      "PS",
-      "Adventure stories",
-      "Fantasy fiction",
-      "Tarzan (Fictitious character) -- Fiction",
-      "Jungle animals -- Fiction",
-    ],
-    title: "Tarzanin pedot",
-  },
-  {
-    author: ["Hickson, Sydney J. (Sydney John)"],
-    language: "en",
-    subject: ["QL", "Marine animals"],
-    title: "The fauna of the deep sea",
-  },
-  {
-    author: ["Ewald, Carl"],
-    language: "en",
-    subject: [
-      "PZ",
-      "Fathers and sons -- Juvenile fiction",
-      "Human beings -- Juvenile fiction",
-      "Animals -- Juvenile fiction",
-      "Human-animal relationships -- Juvenile fiction",
-    ],
-    title: "Two-Legs",
-  },
-  {
-    author: ["Burgess, Thornton W. (Thornton Waldo)"],
-    language: "en",
-    subject: [
-      "Friendship -- Juvenile fiction",
-      "PZ",
-      "Robbers and outlaws -- Juvenile fiction",
-      "Minks -- Juvenile fiction",
-      "Forest animals -- Juvenile fiction",
-    ],
-    title: "Billy Mink",
-  },
-  {
-    author: ["Gautier, Théophile"],
-    language: "en",
-    subject: ["QL", "Domestic animals"],
-    title: "My household of pets",
-  },
-  {
-    author: ["Grey, Eliza"],
-    language: "en",
-    subject: [
-      "Children and animals -- Juvenile fiction",
-      "PZ",
-      "Pets -- Juvenile fiction",
-      "Marmots -- Juvenile fiction",
-    ],
-    title: "The Adventures of a Marmotte\nSold for the Distressed Irish",
-  },
-  {
-    author: ["Kipling, Rudyard"],
-    language: "en",
-    subject: [
-      "India -- History -- 19th century -- Fiction",
-      "Feral children -- Fiction",
-      "Animals -- Fiction",
-      "Jungles -- Fiction",
-      "India -- Fiction",
-      "PR",
-      "Adventure stories, English",
-      "Mowgli (Fictitious character) -- Fiction",
-      "Short stories",
-      "Jungle animals -- Fiction",
-    ],
-    title: "The Jungle Book",
-  },
+const items = [
+  { id: "first", title: "First article", image: "./first.jpeg" },
+  { id: "second", title: "Second article", image: "./second.jpeg" },
+  { id: "third", title: "Third article", image: "./third.jpeg" },
 ];
 
+// body selector
 const body = document.querySelector("body");
-const cardMaker = (aBook) => {
-  console.log(aBook);
-  const container = document.createElement("div");
-  const author = document.createElement("h3");
-  const language = document.createElement("h3");
-  const subject = document.createElement("h3");
+const section = document.querySelector("section");
+const form = document.querySelector("form");
+const first = document.querySelector("#first");
+const second = document.querySelector("#second");
+const third = document.querySelector("#third");
+const selectors = [first, second, third];
+const url = "../images/49650172483_e00ecebf26_b.jpg";
+
+// const other = Array.from(document.querySelectorAll('div'));
+// console.log(document.querySelectorAll('div'));
+// console.log(other);
+
+// need to fill in the divs to create:
+{
+  /* <div>
+    <h3></h3>
+    <img />
+</div> */
+}
+console.log(document);
+
+const imageExample = document.createElement("img");
+console.log(imageExample);
+// imageExample.src = url;
+// body.append(imageExample);
+
+function createCard(obj) {
+  const div = document.querySelector(`#${obj.id}`);
+  // console.log(div);
+
+  // create elements
   const title = document.createElement("h3");
-  //make pieces
-  //add content
-  author.innerHTML = aBook.author;
-  language.innerHTML = aBook.language;
-  subject.innerHTML = aBook.subject;
-  title.innerHTML = aBook.title;
-  container.append(author, language, subject, title);
+  const img = document.createElement("img");
 
-  return container;
-};
+  // push the values in
+  title.innerHTML = obj.title;
 
-//---------------Sort seelctions---------------------------
-const sortingSelection = document.getElementById("sort");
-sortingSelection.addEventListener("change", function () {
-  let optionSelected = sortingSelection.value;
-  // book(sortingSelection.value)
-  //{
-  console.log(optionSelected);
-  bookData.sort((a, b) => {
-    if (a.optionSelected < b.optionSelected) {
-      console.log(b.optionSelected);
-      return -1;
-    }
-    if (a.optionSelected > b.optionSelected) {
-      console.log(a.optionSelected);
-      return 1;
-    }
-    return 0;
+  img.src = obj.image;
+  img.alt = obj.title;
+  console.log(title);
+  console.log(img);
+
+  // add css
+  img.style.border = "5px solid red";
+  title.style.border = "5px solid green";
+
+  // img {
+  //     border: '';
+  // }
+
+  // append
+  div.append(title);
+  div.append(img);
+}
+// createCard(items[0]);
+
+function toggleContent(className, element) {
+  element.classList.toggle(className);
+}
+
+// if we have to do something several times, probably a loop will help
+items.forEach((item) => {
+  // console.log(item);
+  createCard(item);
+});
+
+body.addEventListener("dblclick", () => {
+  console.log("Clicked the body!");
+});
+
+section.addEventListener("click", () => {
+  console.log("Clicked the section!");
+
+  const child = section.removeChild(first);
+  console.log(child);
+});
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  selectors.forEach((element) => {
+    console.log(element);
+    toggleContent("hide", element);
   });
-  console.log(bookData);
-  //   } else if (optionSelected === "language") {
-  //     console.log("Hello");
-  //     bookData.sort((a, b) => {
-  //       if (a.language < b.language) {
-  //         return -1;
-  //       }
-  //       if (a.language > b.language) {
-  //         return 1;
-  //       }
-  //       return 0;
-  //     });
-  //   } else if (optionSelected === "title") {
-  //     bookData.sort((a, b) => {
-  //       if (a.title < b.title) {
-  //         return -1;
-  //       }
-  //       if (a.title > b.title) {
-  //         return 1;
-  //       }
-  //       return 0;
-  //     });
-  //   } else if(optionSelected === "author"){
-  //     bookData.sort((a, b) => {
-  //       if (a.author < b.author) {
-  //         return -1;
-  //       }
-  //       if (a.author > b.author) {
-  //         return 1;
-  //       }
-  //       return 0;
-  //     });
+  console.log("Submitted the form!");
 });
-bookData.map((singleObj) => {
-  console.log(singleObj);
-  const card = cardMaker(singleObj);
-  body.append(card);
-});
-//--------------------------------------------------
+
+const aTags = document.querySelectorAll("a");
+const aTagArr = Array.from(aTags);
+console.log(aTags);
+console.log(aTagArr);
