@@ -1,0 +1,7 @@
+body{
+  /* background-color: blue;  */
+  display: flex;
+  flex-direction: column;
+  /* height: 80vh; */
+  margin: 20px;
+}
