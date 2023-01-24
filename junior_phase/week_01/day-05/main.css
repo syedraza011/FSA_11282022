@@ -1,0 +1,20 @@
+.parent{
+    background-color: burlywood;
+    width: 550px;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 180px;
+    margin-top: 180px;
+
+}.child{
+    background-color: brown;
+    width: 200px;
+    height: 200px;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+    gap: 80px;
+}
