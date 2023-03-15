@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Cookie Clicker!</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" 
+      type="image/png" 
+      href="Cookie.png">
+</head>
+
+<body>
+
+	<h1> Cookies: </h1>
+	<h2 id="cookies"> 0 </h2>
+	<img src="Cookie.png" onclick="ClickUp();" id="cookie" />
+    <p> Made by Noel </p>
+    <p id="cpsDisplay"> You are getting: 0 per second</p> 
+    <p id="cpcDisplay"> You are getting: 0 per click</p>
+    <button class="button" id="smallcpcBuy" onclick="cpcUp();" >+1 Cookies Per Click! 25 cookies. </button>
+    <button class="button" id="bigcpcBuy" onclick="bigcpcUp();" >+6 Cookies Per Click! 250 cookies. </button>
+    <button class="button" id="ClickerBuy" onclick="buyClicker();" >+1 Cookies Per Second! 50 cookies. </button>
+    <button class="button" id="BigClickerBuy" onclick="buyBigClicker();" >+5 Cookies Per Second! 300 cookies. </button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <button onclick="resetData();" >Reset your data</button>
+    
+    <script src="script.js"></script>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,10 @@
+.button {
+    background-color: #00CED1; 
+    color: white;
+    padding: 30px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+  }
+  body {background-color: coral;}
